@@ -27,6 +27,10 @@ categories:
   slug: how-i-do-things
   name: How I do things
   parent: ''
+- id: '5'
+  slug: fitness
+  name: Fitness
+  parent: ''
 tags:
 - id: '1'
   slug: blogging
@@ -34,3 +38,12 @@ tags:
 - id: '2'
   slug: hugo
   name: hugo
+- id: '3'
+  slug: running
+  name: running
+- id: '4'
+  slug: gym
+  name: gym
+- id: '5'
+  slug: resistance-training
+  name: resistance training
