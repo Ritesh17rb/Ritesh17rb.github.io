@@ -13,7 +13,6 @@ keywords: [resistance training, running, gym, fitness journey, one month transfo
 ---
 
 ![Post-gym selfie, gloves still on](/blog/assets/post-gym-selfie.webp)
-{.portrait}
 
 That's me, right after a gym session. Sweaty, tired, gloves still on — and honestly, happier than I've been in a long time.
 
@@ -52,7 +51,6 @@ I'll say this plainly: the mental change is bigger than the physical one.
 Running did something for my head that nothing else has. There's a point around the 3rd or 4th kilometre where the noise just... stops. Whatever I was overthinking — work, people, the future — it gets quieter with every step. Some of my clearest thinking this month happened on the road, drenched in sweat, music in my ears.
 
 ![Right after a 5 km run](/blog/assets/after-5k-run-selfie.webp)
-{.portrait}
 
 That's what the end of a 5 km run looks like. Completely drained, completely clear-headed.
 
