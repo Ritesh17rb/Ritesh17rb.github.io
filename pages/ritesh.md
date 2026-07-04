@@ -25,3 +25,7 @@ Hi, I'm **Ritesh**. Welcome to my corner of the internet.
 **RECENT POSTS**
 
 {{< post-calendar >}}
+
+{{< recent-posts count="10" >}}
+
+[Read Full Blog &raquo;](/blog/)
