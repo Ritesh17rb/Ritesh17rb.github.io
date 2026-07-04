@@ -1,8 +1,6 @@
-# TODO: replace YOUR-GITHUB-USERNAME once you create the GitHub repo.
-# For an exact clone of the original's URL structure (site at domain root, blog
-# under /blog/), name the repo "<username>.github.io" (a GitHub Pages user site)
-# or attach a custom domain.
-baseURL = "https://YOUR-GITHUB-USERNAME.github.io/blog/"
+# Site is served from the domain root (GitHub Pages user site: repo must be
+# named "Ritesh17rb.github.io"), with the blog under /blog/.
+baseURL = "https://ritesh17rb.github.io/blog/"
 title = "Ritesh"
 languageCode = "en-us"
 enableRobotsTXT = true
@@ -50,7 +48,7 @@ cleanDestinationDir = true
     target = "static/assets"
 
 [params]
-  logoURL = "https://YOUR-GITHUB-USERNAME.github.io/"
+  logoURL = "https://ritesh17rb.github.io/"
   description = "Technology, education and fun"
   [params.author]
     name = "Ritesh"
@@ -74,7 +72,7 @@ cleanDestinationDir = true
   safari_pinned_tab = "assets/favicon.svg"
 
 [params.github]
-  rawMarkdownBase = "https://raw.githubusercontent.com/YOUR-GITHUB-USERNAME/blog/main"
+  rawMarkdownBase = "https://raw.githubusercontent.com/Ritesh17rb/Ritesh17rb.github.io/main"
 
 [outputFormats]
   [outputFormats.navjson]

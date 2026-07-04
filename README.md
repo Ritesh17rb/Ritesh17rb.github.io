@@ -64,17 +64,15 @@ future are not published until that time passes.
 
 ## Deploy to GitHub Pages
 
-1. Replace `YOUR-GITHUB-USERNAME` everywhere (`hugo.toml`, `metadata.yml`,
-   `pages/ritesh.md`, `layouts/partials/footer.html`).
-2. Create a GitHub repo and push this to its `main` branch.
-   **Repo name matters**: internal links use absolute `/blog/...` paths, so the
-   site must be served from a domain root. Name the repo
-   `<username>.github.io` (a GitHub Pages *user site*), or use any name and
-   attach a custom domain via a `CNAME` file.
-3. In the repo: Settings → Pages → Source → **GitHub Actions**.
-4. Push. The workflow in `.github/workflows/deploy.yml` builds and deploys
-   automatically. The blog appears at `https://<username>.github.io/blog/`,
-   with the home page at `https://<username>.github.io/`.
+1. Create a GitHub repo named **`Ritesh17rb.github.io`** and push this to its
+   `main` branch. The repo name matters: internal links use absolute
+   `/blog/...` paths, so the site must be served from a domain root — which a
+   GitHub Pages *user site* (`<username>.github.io`) provides. (A custom
+   domain via a `CNAME` file also works.)
+2. In the repo: Settings → Pages → Source → **GitHub Actions**.
+3. Push. The workflow in `.github/workflows/deploy.yml` builds and deploys
+   automatically. The blog appears at <https://ritesh17rb.github.io/blog/>,
+   with the home page at <https://ritesh17rb.github.io/>.
 
 Commits whose message contains `[skip ci]` do not trigger a deploy.
 

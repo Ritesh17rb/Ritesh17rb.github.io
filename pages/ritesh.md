@@ -14,7 +14,7 @@ Hi, I'm **Ritesh**. Welcome to my corner of the internet.
 **CONTACT ME**
 
 **e-mail**: [ritesh17lifeamazing@gmail.com](mailto:ritesh17lifeamazing@gmail.com)\
-**social**: [GitHub](https://github.com/YOUR-GITHUB-USERNAME)
+**social**: [GitHub](https://github.com/Ritesh17rb)
 
 <!-- TODO: Add LinkedIn, Twitter/X, YouTube, etc. -->
 
