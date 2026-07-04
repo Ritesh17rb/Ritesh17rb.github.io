@@ -18,3 +18,4 @@ uv run scripts/postprocess_feed_paths.py public/blog
 # Copy the home page (pages/ritesh.md) to the site root
 cp public/blog/ritesh/index.html public/
 
+
