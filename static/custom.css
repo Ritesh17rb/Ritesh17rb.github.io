@@ -1,0 +1,571 @@
+.footer {
+  --footer-accent: #b85c00;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+  text-align: left;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.04), transparent),
+    var(--theme);
+}
+
+html[data-theme="dark"] .footer {
+  --footer-accent: #f5a623;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent),
+    var(--theme);
+}
+
+.footer-columns {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Footer section headers — always-visible heading on desktop, toggle on mobile */
+.footer-section summary {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.15s;
+}
+
+.footer-section summary::-webkit-details-marker { display: none; }
+
+/* Chevron — rotates when open */
+.footer-section summary::after {
+  content: '›';
+  margin-left: auto;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.4;
+  transition: transform 0.2s, opacity 0.2s;
+  transform: rotate(90deg);
+}
+
+.footer-section:not([open]) summary::after {
+  transform: rotate(0deg);
+}
+
+.footer-section summary:hover {
+  color: var(--primary);
+}
+
+/* On desktop: summary is decorative, no toggle needed */
+@media (min-width: 640px) {
+  .footer-section summary {
+    cursor: default;
+    pointer-events: none;
+  }
+  .footer-section summary::after {
+    display: none;
+  }
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 0;
+}
+
+/* Full-width links with name + count layout */
+.footer-section a {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  padding: 0.28rem 0;
+  gap: 0.5rem;
+  color: var(--secondary);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.15s;
+  border-bottom: none;
+}
+
+.footer-section a:hover,
+.footer-section a:focus {
+  color: var(--primary);
+  border-bottom: none;
+}
+
+/* Proportional data bar: 1px line below counted links (width via --bar-width; 0% = invisible) */
+.footer-section a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: var(--bar-width, 0%);
+  background: var(--footer-accent);
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.footer-section a:hover::after {
+  opacity: 0.75;
+}
+
+/* Link label — takes remaining space, clips if too long */
+.nav-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Post count — tabular, monospace, muted, right-aligned */
+.nav-count {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-family: ui-monospace, 'Cascadia Mono', 'Fira Code', monospace;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.5;
+  letter-spacing: 0;
+}
+
+.footer-section a:hover .nav-count {
+  opacity: 0.8;
+}
+
+footer.footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem var(--gap);
+  font-size: 0.9rem;
+  opacity: 0.85;
+  border-top: 1px solid var(--border);
+  background: var(--theme);
+}
+
+.nav {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 var(--gap);
+}
+
+.logo {
+  flex: 1 1 100%;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+}
+
+#menu {
+  flex-basis: 100%;
+  justify-content: flex-start;
+  margin: 0 var(--gap);
+}
+
+.entry-thumb {
+  margin-bottom: var(--gap);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--entry);
+}
+
+.entry-thumb img {
+  width: 100%;
+  height: clamp(140px, 24vw, 220px);
+  object-fit: cover;
+  display: block;
+}
+
+.post-content img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content img.alignleft {
+  float: left;
+  margin: 0.3rem 1.2rem 0.6rem 0;
+}
+
+.post-content img.alignright {
+  float: right;
+  margin: 0.3rem 0 0.6rem 1.2rem;
+}
+
+.post-content img.size-large,
+.post-content img.size-full {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-embed {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--entry);
+  border: 1px solid var(--border);
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.post-content iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+/* Adding classes: wrap-code enables prompts to be wrapped. */
+.wrap-code pre code {
+  white-space: pre-wrap;
+  /* Don't break words for prompts. Override .post-content pre code { word-break: break-all; } */
+  word-break: normal;
+}
+
+#comments {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.linkedin-post-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.linkedin-post-link:hover,
+.linkedin-post-link:focus-visible {
+  color: var(--primary);
+}
+
+.linkedin-post-link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Post Calendar - GitHub-style contribution calendar */
+.post-calendar {
+  margin: 2rem 0;
+}
+
+/* Wrapper with RTL direction to show most recent content first */
+.calendar-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  direction: rtl;
+  margin-bottom: 10px;
+  scrollbar-color: var(--tertiary) var(--theme)
+}
+
+.calendar-graph {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  direction: ltr;
+  min-width: 700px;
+  width: fit-content;
+  padding: 8px;
+}
+
+.calendar-months {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(52, 11px);
+  gap: 3px;
+  height: 18px;
+  margin-bottom: 2px;
+  font-size: 10px;
+}
+
+.calendar-month {
+  display: flex;
+  align-items: center;
+  color: var(--secondary);
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.calendar-weekdays {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3px;
+  font-size: 9px;
+  color: var(--secondary);
+  padding-right: 6px;
+  text-align: right;
+  min-width: 12px;
+}
+
+.calendar-weekdays div {
+  height: 11px;
+  line-height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(52, 11px);
+  grid-template-rows: repeat(7, 11px);
+  gap: 3px;
+  grid-auto-flow: column;
+}
+
+.calendar-day {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  cursor: default;
+  transition: all 0.15s ease;
+  display: block;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+a.calendar-day {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.calendar-day.level-0 {
+  background: #ebedf0;
+}
+
+.calendar-day.level-1 {
+  background: #9be9a8;
+}
+
+.calendar-day.level-2 {
+  background: #40c463;
+}
+
+.calendar-day.level-3 {
+  background: #30a14e;
+}
+
+.calendar-day.level-4 {
+  background: #216e39;
+}
+
+html[data-theme="dark"] .calendar-day.level-0 {
+  background: #161b22;
+}
+
+html[data-theme="dark"] .calendar-day.level-1 {
+  background: #0e4429;
+}
+
+html[data-theme="dark"] .calendar-day.level-2 {
+  background: #006d32;
+}
+
+html[data-theme="dark"] .calendar-day.level-3 {
+  background: #26a641;
+}
+
+html[data-theme="dark"] .calendar-day.level-4 {
+  background: #39d353;
+}
+
+.calendar-day.future {
+  background: transparent;
+  cursor: default;
+}
+
+a.calendar-day:hover:not(.future),
+a.calendar-day:focus:not(.future) {
+  border-color: var(--content);
+  transform: scale(1.2);
+  z-index: 10;
+  position: relative;
+}
+
+.calendar-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--secondary);
+  margin-left: auto;
+}
+
+.legend-day {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+}
+
+.legend-day.level-0 {
+  background: #ebedf0;
+}
+
+.legend-day.level-1 {
+  background: #9be9a8;
+}
+
+.legend-day.level-2 {
+  background: #40c463;
+}
+
+.legend-day.level-3 {
+  background: #30a14e;
+}
+
+.legend-day.level-4 {
+  background: #216e39;
+}
+
+html[data-theme="dark"] .legend-day.level-0 {
+  background: #161b22;
+}
+
+html[data-theme="dark"] .legend-day.level-1 {
+  background: #0e4429;
+}
+
+html[data-theme="dark"] .legend-day.level-2 {
+  background: #006d32;
+}
+
+html[data-theme="dark"] .legend-day.level-3 {
+  background: #26a641;
+}
+
+html[data-theme="dark"] .legend-day.level-4 {
+  background: #39d353;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .post-calendar {
+    padding: 1rem;
+  }
+
+  .calendar-graph {
+    min-width: 600px;
+  }
+
+  .calendar-months {
+    font-size: 9px;
+  }
+}
+
+/* ===== AI-Generated Content Disclosure ===== */
+/*
+ * Styles section[ai-disclosure="ai-generated"] elements.
+ * Works with any data-ai-* attributes (data-ai-model, data-ai-provider, etc.)
+ * Uses opacity + lightness/darkness only — no hue changes — for subtle theming.
+ * Handles both light and dark modes via color-mix against theme variables.
+ */
+section[ai-disclosure="ai-generated"] {
+  position: relative;
+  padding: 2rem 1.5rem 1rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  /* Subtle background: mix a touch of primary (dark in light mode, light in dark mode) */
+  background: color-mix(in srgb, var(--theme) 97%, var(--primary) 3%);
+  border-left-width: 3px;
+}
+
+/* AI badge — injected via JS, positioned top-right */
+.ai-disclosure-badge {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.7rem;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  padding: 0.12rem 0.42rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--secondary) 18%, transparent);
+  color: var(--secondary);
+  opacity: 0.65;
+  cursor: default;
+  transition: opacity 0.2s;
+  z-index: 1;
+  user-select: none;
+  line-height: 1.6;
+}
+
+.ai-disclosure-badge:hover {
+  opacity: 1;
+}
+
+/* Tooltip revealed on badge hover */
+.ai-disclosure-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  padding: 0.3rem 0.55rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--secondary);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--primary) 12%, transparent);
+  transition: opacity 0.15s, visibility 0.15s;
+  pointer-events: none;
+}
+
+.ai-disclosure-badge:hover .ai-disclosure-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Bottom attribution — injected via JS */
+.ai-disclosure-footer {
+  margin-top: 1.1rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  font-size: 0.62rem;
+  opacity: 0.45;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-family: ui-monospace, 'Cascadia Mono', 'Fira Code', monospace;
+}
