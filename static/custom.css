@@ -214,6 +214,16 @@ footer.footer-meta {
   height: auto;
 }
 
+/* Tall phone photos: cap height, center, keep aspect ratio */
+.post-content .portrait img {
+  display: block;
+  max-height: min(70vh, 480px);
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
 .video-embed {
   position: relative;
   padding-top: 56.25%;
