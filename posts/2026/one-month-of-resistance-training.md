@@ -12,9 +12,9 @@ description: "I joined the gym on 18th May. One month of resistance training and
 keywords: [resistance training, running, gym, fitness journey, one month transformation, discipline, confidence]
 ---
 
-![Post-run selfie, gloves still on](/blog/assets/post-run-selfie.webp)
+![Post-gym selfie, gloves still on](/blog/assets/post-gym-selfie.webp)
 
-That's me, right after a run. Sweaty, tired, gloves still on — and honestly, happier than I've been in a long time.
+That's me, right after a gym session. Sweaty, tired, gloves still on — and honestly, happier than I've been in a long time.
 
 I joined the gym on **18th May**. No grand plan, no transformation challenge, no "new me" post. I just walked in one evening because I was tired of feeling tired. This is what one month of resistance training — plus **15-20 km of running every week** — has actually done to me.
 
@@ -49,6 +49,10 @@ Also, having a fixed workout slot forced structure onto everything else. When yo
 I'll say this plainly: the mental change is bigger than the physical one.
 
 Running did something for my head that nothing else has. There's a point around the 3rd or 4th kilometre where the noise just... stops. Whatever I was overthinking — work, people, the future — it gets quieter with every step. Some of my clearest thinking this month happened on the road, drenched in sweat, music in my ears.
+
+![Right after a 5 km run](/blog/assets/after-5k-run-selfie.webp)
+
+That's what the end of a 5 km run looks like. Completely drained, completely clear-headed.
 
 And the gym gave me proof. That's the word — **proof**. Every week there's evidence that I'm capable of more than last week. A little more weight. One more rep. A run that felt impossible in May and feels normal now. You can't argue with a logbook.
 

@@ -1,0 +1,11 @@
+{{- /* Embed an Instagram post or reel.
+     Usage: {{< instagram "https://www.instagram.com/reel/XXXXXXXX/" >}} */ -}}
+<blockquote
+  class="instagram-media"
+  data-instgrm-permalink="{{ .Get 0 }}"
+  data-instgrm-version="14"
+  style="max-width: 540px; width: 100%; margin: 1em auto; border: 0; padding: 0;"
+>
+  <a href="{{ .Get 0 }}" rel="noopener" target="_blank">View this post on Instagram</a>
+</blockquote>
+<script async src="https://www.instagram.com/embed.js"></script>
