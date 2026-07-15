@@ -1,38 +1,27 @@
-<div id="giscus-comments" class="post-comments"></div>
+{{- $appId := site.Params.cusdisAppId }}
+{{- if $appId }}
+<div
+  id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="{{ $appId }}"
+  data-page-id="{{ .RelPermalink }}"
+  data-page-url="{{ .Permalink }}"
+  data-page-title="{{ .Title }}"
+  data-theme="{{ if eq (.Site.Params.defaultTheme | default "auto") "dark" }}dark{{ else }}light{{ end }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 <script>
   (function () {
-    var initialTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-
-    var script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "Ritesh17rb/Ritesh17rb.github.io");
-    script.setAttribute("data-repo-id", "R_kgDOTNvWcQ");
-    script.setAttribute("data-category", "Announcements");
-    script.setAttribute("data-category-id", "DIC_kwDOTNvWcc4DBRWq");
-    script.setAttribute("data-mapping", "pathname");
-    script.setAttribute("data-strict", "0");
-    script.setAttribute("data-reactions-enabled", "1");
-    script.setAttribute("data-emit-metadata", "0");
-    script.setAttribute("data-input-position", "bottom");
-    script.setAttribute("data-theme", initialTheme);
-    script.setAttribute("data-lang", "en");
-    script.setAttribute("crossorigin", "anonymous");
-    script.async = true;
-    document.getElementById("giscus-comments").appendChild(script);
-
-    // Keep giscus in sync when the site's own light/dark toggle is used.
+    // Keep Cusdis in sync when the site's own light/dark toggle is used.
     var toggle = document.getElementById("theme-toggle");
     if (toggle) {
       toggle.addEventListener("click", function () {
         var theme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
-        var iframe = document.querySelector("iframe.giscus-frame");
-        if (iframe) {
-          iframe.contentWindow.postMessage(
-            { giscus: { setConfig: { theme: theme } } },
-            "https://giscus.app"
-          );
+        if (window.CUSDIS && window.CUSDIS.setTheme) {
+          window.CUSDIS.setTheme(theme);
         }
       });
     }
   })();
 </script>
+{{- end }}
