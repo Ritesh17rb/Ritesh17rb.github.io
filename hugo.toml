@@ -50,9 +50,6 @@ cleanDestinationDir = true
 [params]
   logoURL = "https://ritesh17rb.github.io/"
   description = "Technology, education and fun"
-  [params.author]
-    name = "Ritesh"
-    email = ""
   defaultTheme = "light"
   disableThemeToggle = false
   ShowBreadCrumbs = false
@@ -63,6 +60,10 @@ cleanDestinationDir = true
   ShowCodeCopyButtons = true
   DateFormat = "2006-01-02"
   mainSections = ["posts"]
+  comments = true
+  [params.author]
+    name = "Ritesh"
+    email = ""
 
 [params.assets]
   favicon = "assets/favicon.svg"
