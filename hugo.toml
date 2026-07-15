@@ -60,11 +60,6 @@ cleanDestinationDir = true
   ShowCodeCopyButtons = true
   DateFormat = "2006-01-02"
   mainSections = ["posts"]
-  comments = true
-  # Get this from your project settings at https://cusdis.com after adding
-  # this site (data page-id is the post's RelPermalink, no login required
-  # for visitors to comment; new comments wait in the moderation queue).
-  cusdisAppId = "6a0aa7f1-ba74-4cac-bd72-4680d4894731"
   [params.author]
     name = "Ritesh"
     email = ""
