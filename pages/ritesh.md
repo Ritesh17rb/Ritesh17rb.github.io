@@ -14,7 +14,7 @@ Hi, I'm **Ritesh**. Welcome to my corner of the internet.
 **CONTACT ME**
 
 **whatsapp**: [+91 90317 43720](https://api.whatsapp.com/send?phone=919031743720)\
-**e-mail**: [ritesh17lifeamazing@gmail.com](mailto:ritesh17lifeamazing@gmail.com)\
+**e-mail**: [ritesh17life@gmail.com](mailto:ritesh17life@gmail.com)\
 **social**: [LinkedIn](https://www.linkedin.com/in/ritesh17rb/) | [GitHub](https://github.com/Ritesh17rb) | [YouTube](https://www.youtube.com/@riiittesshh) | [Instagram](https://www.instagram.com/ritesh17rb/)
 
 **GET UPDATES**
